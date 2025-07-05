@@ -1,32 +1,20 @@
 {
-    "id": "javascript-node",
-    "version": "4.0.2",
-    "name": "Node.js & JavaScript",
-    "description": "Develop Node.js based applications. Includes Node.js, eslint, nvm, and yarn.",
-    "documentationURL": "https://github.com/devcontainers/templates/tree/main/src/javascript-node",
-    "publisher": "Dev Container Spec Maintainers",
-    "licenseURL": "https://github.com/devcontainers/templates/blob/main/LICENSE",
-    "options": {
-        "imageVariant": {
-            "type": "string",
-            "description": "Node.js version (use -bookworm, -bullseye variants on local arm64/Apple Silicon):",
-            "proposals": [
-                "22-bookworm",
-                "22-bullseye",
-                "20-bookworm",
-                "20-bullseye",
-                "18-bookworm",
-                "20-bullseye",
-                "18-bullseye"
-            ],
-            "default": "22-bookworm"
-        }
-    },
-    "platforms": [
-        "Node.js",
-        "JavaScript"
-    ],
-    "optionalPaths": [
-        ".github/*"
-    ]
+	"name": "Wings Dev",
+	"image": "mcr.miscrosoft.com/devcontainers/base:unbuntu",
+	"features":{
+		"ghcr.io/devcontainers/features/php:1":{
+			"version": "8.2"
+		},
+		"ghcr.io/devcontainers/features/node:1":{
+			"version": "18"
+		}
+	},
+	"customization": {
+		"vscode":{
+			"extensions":[
+				"xdebug.php-pack",
+				"dbaeumer.vscode-eslint"
+			]
+		}
+	}
 }
